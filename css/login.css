@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Montserrat;
+}
+
+.login-box{
+    background: linear-gradient(48.76deg, rgb(254, 175, 0) 19.353%,rgb(248, 212, 66) 90.115%);   
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Admin page</title>
+    <!-- CSS start -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(240, 240, 239)">
+    <div class="flex container mx-auto">
+      <nav
+        style="background-color: rgb(242, 234, 225)"
+        class="w-[300px] bg-white h-[100vh]"
+      >
+        <div class="py-[18px]">
+          <h2 class="text-center font-bold text-[20px]">CRUD OPERATIONS</h2>
+        </div>
+        <div class="avatar-change flex flex-col w-[141px] mx-[64px] my-[36px]">
+          <img
+            class="mx-auto rounded-full"
+            src="./images/photo_2022-10-24_21-17-52.jpg"
+            alt="img"
+          />
+          <h3 class="font-bold text-center text-[16px]">Anarbayev Sardor</h3>
+        </div>
+        <ul
+          class="flex flex-col px-[34px] py-[20px] cursor-pointer text-[20px]"
+        >
+          <li
+            style="background-color: rgb(254, 175, 0)"
+            class="flex justify-center items-center gap-3 border-2px border-solid border-2 rounded-[4px] py-[12px] px-[52px]"
+          >
+            <img src="./images/graduation-cap 1.svg" alt="Studets" />Students
+          </li>
+          <button id="logout-btn" class="flex justify-center items-center  mt-[250px] gap-4">Logout <img src="./images/sign-out-alt 1.svg" alt=""></button>
+        </ul>
+      </nav>
+      <div class="w-[100%]">
+        <div style="background-color: rgb(242, 234, 225)" class="flex items-center justify-between">
+          <img class="py-[23px] mx-[30px]" src="./images/caret-circle-down 1.svg" alt="">
+          <div class="search-box flex gap-[27px]">
+            <div class="search-wrapper relative flex">
+              <input class="w-[212px] py-[10px] rounded-[8px] search-input" placeholder="Search..." type="text" />
+              <ul class="search-list absolute left-0 right-0 w-[100%] mx-auto p-[10px] rounded-[20px]"></ul>
+            </div>
+            <img class="mr-[50px]" src="./images/Vector.svg" alt="">
+          </div>
+        
+        </div>
+        <div class="flex items-center justify-between p-5 border-solid border-b-2 border-gray-300">
+          <h3 class="font-bold text-[22px] ">Students List</h3>
+          <div class="add-box flex justify-center items-center gap-4">
+            <div class="sort-name">
+              <img src="./images/sort.svg" alt="">
+            </div>
+            <button style="background-color: rgb(254, 175, 0);" data-bs-toggle="modal" data-bs-target="#userForm"
+            class="btn btn-primary newUser font-bold text-white  text-[14px] w-[222px] rounded-[4px] p-3 hover:opacity-[0.5] duration-200"
+          >
+          ADD NEW STUDENT
+          </button>
+          </div>
+        </div>
+        
+        <div class="p-5">
+          <table class="m-auto mx-[139px]">
+            <thead class="">
+              <tr class="">
+                <th class="w-[250px] p-3">
+                  Name
+                </th>
+                <th class=" w-[250px] p-3">Email</th>
+                <th class=" w-[250px] p-3">Phone</th>
+                <th class=" w-[250px] p-3">Enroll Number</th>
+                <th class=" w-[250px] p-3">Date   admission</th>
+              </tr>
+            </thead>
+            <tbody class="tbody translate-y-[10px]"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal start -->
+    <div class="modal-wrapper" id="modal-wrapper">
+      <div class="modal"></div>
+    </div>
+    <!-- JS start -->
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
